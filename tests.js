@@ -1,9 +1,8 @@
-const { expect } = require('chai')
-const { describe, it } = require('mocha')
-const calculateScore = require('./scoring')
+const expect = require('chai').expect
+const calculateScore = require('./index.js')
 
 describe('calculateScore', () => {
-  it('returns the score for a quarterback', function () {
+  it('returns the score for a quarterback', () => {
     const player = {
       name: 'Patrick Mahomes',
       position: 'QB',
@@ -25,7 +24,7 @@ describe('calculateScore', () => {
     expect(score).to.equal(40.72)
   })
 
-  it('returns the score for a running back', function () {
+  it('returns the score for a running back', () => {
     const player = {
       name: 'LeSean McCoy',
       position: 'RB',
@@ -45,7 +44,7 @@ describe('calculateScore', () => {
     expect(score).to.equal(32)
   })
 
-  it('returns the score for a receiver', function () {
+  it('returns the score for a receiver', () => {
     const player = {
       name: 'Tyler Lockett',
       position: 'WR',
@@ -65,7 +64,7 @@ describe('calculateScore', () => {
     expect(score).to.equal(32.3)
   })
 
-  it('returns the score for a tightend', function () {
+  it('returns the score for a tightend', () => {
     const player = {
       name: 'Rob Gronkowski',
       position: 'TE',
@@ -96,3 +95,5 @@ describe('calculateScore', () => {
     expect(score).to.equal(0)
   })
 })
+
+
